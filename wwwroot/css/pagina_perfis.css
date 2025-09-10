@@ -1,0 +1,183 @@
+/* ---------------- IMPORTAÇÃO DE FONTES ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* ---------------- RESET BÁSICO ---------------- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- VARIÁVEIS GLOBAIS ---------------- */
+:root {
+  --fonte-montserrat: "Montserrat", sans-serif;
+  --fonte-karla: "Karla", sans-serif;
+  --fonte-spectral: "Spectral", serif;
+  --cor-preto: #00251f;
+  --cor-primaria: #00785E;
+  --cor-secundaria: #00B08A;
+  --cor-cinza: #b4bec9;
+  --cor-branco: #e2e2e2;
+}
+
+/* ---------------- MODO ESCURO ---------------- */
+body.dark-mode {
+  --cor-preto: #e2e2e2;
+  --cor-primaria: #00c9a7;
+  --cor-secundaria: #00695c;
+  --cor-cinza: #b4bec9;
+  --cor-branco: #121212;
+  background: radial-gradient(circle, #121212 0%, #00695c 100%);
+}
+
+/* ---------------- BODY E MAIN ---------------- */
+html, body {
+  height: 100%;
+  font-family: var(--fonte-montserrat);
+  background: radial-gradient(circle, var(--cor-preto) 0%, var(--cor-primaria) 100%);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+/* ---------------- CARDS ---------------- */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: var(--cor-branco);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  overflow: hidden;
+  position: relative;
+  width: 260px;
+  transition: transform .25s ease, box-shadow .25s ease, background .3s ease, color .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 45px rgba(0,120,94,.4);
+}
+
+.banner {
+  height: 110px;
+  background: var(--cor-primaria);
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 33px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 6px solid var(--cor-primaria);
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------------- CONTEÚDO ---------------- */
+.body {
+  padding: 40px 12px 12px;
+  text-align: center;
+}
+
+.name {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--cor-preto);
+}
+
+.age {
+  color: var(--cor-primaria);
+  margin-left: 6px;
+}
+
+.city {
+  color: var(--cor-preto);
+  font-size: 16px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ---------------- ESTATÍSTICAS ---------------- */
+.stats {
+  display: flex;
+  border-top: 1px solid var(--cor-cinza);
+  margin-top: 14px;
+}
+
+.stat {
+  flex: 1;
+  text-align: center;
+  padding: 14px 8px;
+}
+
+.stat+.stat {
+  border-left: 1px solid var(--cor-cinza);
+}
+
+.stat .num {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--cor-primaria);
+}
+
+.stat .label {
+  color: var(--cor-preto);
+  font-size: 14px;
+  letter-spacing: .3px;
+  margin-top: 4px;
+  font-weight: 600;
+}
+
+/* ---------------- ACESSIBILIDADE ---------------- */
+.card:focus-within {
+  outline: 3px solid var(--cor-secundaria);
+  outline-offset: 2px;
+}
+
+/* ---------------- RESPONSIVIDADE ---------------- */
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .stats {
+    flex-direction: column;
+    border-top: none;
+  }
+
+  .stat+.stat {
+    border-left: none;
+    border-top: 1px solid var(--cor-cinza);
+  }
+
+  .body {
+    padding-top: 80px;
+  }
+}

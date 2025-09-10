@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Ícones (Font Awesome) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Estilos padrão -->
+<link rel="stylesheet" href="~/css/global.css" />
+
+<link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon" />
+<title>@ViewData["Title"] - Medtrack</title>
+
+@RenderSection("Styles", required: false)
+
+</head>
+
+<body>
+  
+<main role="main">
+
+<!-- Barra de Navegação (Desktop) -->
+<nav class="navbar">
+<div class="logotipo">
+<img class="navbar-logo" src="~/imagens/logo-claro.svg" alt="LogoTipo da MedTrack" />
+<p>MedTrack</p>
+</div>
+
+<!-- Links do menu principal -->
+<ul class="navbar-list">
+<li><a class="navbar-item" asp-controller="Home" asp-action="Index">Home</a></li>
+<li><a class="navbar-item" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
+</ul>
+
+<!-- Botões do menu (Login, Cadastro, Perfil e Menu Hamburguer) -->
+<div class="navbar-btn">
+<a class="navbar-btn-item" asp-controller="Login" asp-action="Login">Login</a>
+<a class="navbar-btn-item" asp-controller="Home" asp-action="Index">Cadastro</a>
+<a class="navbar-btn-item" asp-controller="Home" asp-action="Index">Formulário</a>
+
+<!-- Ícone do modo claro/escuro -->
+<a href="#" id="dark-mode-toggle" class="navbar-btn-item">
+<i class="fa-solid fa-moon"></i>
+</a>
+
+<a class="navbar-btn-profile" asp-controller="Home" asp-action="Index">
+<i class="fa-solid fa-user"></i>
+</a>
+
+<!-- Ícone do menu mobile -->
+<a class="nav-btn-items" href="#" id="nav-btn-toggle">
+<i class="fa-solid fa-bars"></i>
+</a>
+</div>
+</nav>
+
+<!-- Barra de Navegação Mobile -->
+<div class="navbar-mobile" id="nav-mobile">
+<ul class="nav-list-mobile">
+<li><a class="nav-items" asp-controller="Home" asp-action="Index">Home</a></li>
+<li><a class="nav-items" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
+<li><a class="nav-items" asp-controller="Login" asp-action="Login">Login</a></li>
+<li><a class="nav-items" asp-controller="CHome" asp-action="Index">Cadastro</a></li>
+<li><a class="nav-items" asp-controller="Home" asp-action="Index">Formulário</a></li>
+</ul>
+</div>
+
+@RenderBody()
+
+</main>
+   
+<!-- Rodapé do site -->
+<footer class="footer">
+
+<!-- Ícones das redes sociais -->
+<div class="footer-social">
+<a class="footer-social-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="footer-social-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+<a class="footer-social-link" href="#"><i class="fa-brands fa-youtube"></i></a>
+<a class="footer-social-link" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+
+<!-- Menu de navegação do rodapé -->
+<ul class="footer-menu">
+<li class="footer-item">
+<a class="footer-link" asp-controller="Home" asp-action="Index">Home</a>
+</li>
+<li class="footer-item">
+<a class="footer-link" asp-controller="Home" asp-action="Sobre">Sobre</a>
+</li>
+<li class="footer-item">
+<a class="footer-link" asp-controller="Home" asp-action="Index">Perfil</a>
+</li>
+<li class="footer-item">
+<a class="footer-link" asp-controller="Login" asp-action="Login">Login</a>
+</li>
+<li class="footer-item">
+<a class="footer-link"  asp-controller="Home" asp-action="Index">Cadastro</a>
+</li>
+<li class="footer-item">
+<a class="footer-link" asp-controller="Home" asp-action="Index">Formulário</a>
+</li>
+
+<li class="footer-item">
+<a class="footer-link" asp-controller="Home" asp-action="Index">Perfis</a>
+</li>
+
+</ul>
+</footer>
+
+<!-- Seção de direitos autorais -->
+<div class="copyright">
+<p class="text-copyright">
+© 2025 MedTrack — Saúde digital com inteligência. Todos os direitos reservados.
+</p>
+</div>
+
+<script src="~/js/navbar-mobile.js"></script>
+<script src="~/js/modo-escuro.js"></script>
+<script src="~/js/voltar-topo.js"></script>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+</body>
+
+</html>

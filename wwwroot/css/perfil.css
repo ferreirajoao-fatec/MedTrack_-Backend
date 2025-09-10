@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #deefe7;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 200px;
+  height: 525px;
+  background-color: #009b794d;
+  padding-top: 25px;
+  border-radius: 15px;
+}
+
+
+.perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 5px;
+  margin-bottom: 30px;
+}
+
+.foto-perfil {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: #00251f;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+.editar {
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+  background-color: #009b7a;
+  color: black;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 2px solid white;
+}
+
+.editar a {
+  color: #00251f;
+}
+
+.nome {
+  flex: 1;
+}
+
+.nome input {
+  width: 100%;
+  padding: 5px 10px;
+  background-color: #ffffffc7;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.nome input:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.botoes {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.botoes button {
+  padding: 12px;
+  background-color: #009b7a;
+  border: none;
+  color: black;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.botoes button:hover {
+  background-color: #00251f;
+  color: #fefefe;
+}
+
+.modal-dados, .modal-ctts, .modal-alerg, .modal-remed{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  display: flex;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cttsTabela {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Karla", sans-serif;
+  background-color: #F1F1F1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cttsTabela thead {
+  background-color: #009B7A;
+  color: white;
+  text-align: left;
+}
+
+.cttsTabela th,
+.cttsTabela td {
+  padding: 12px 16px;
+}
+
+.cttsTabela tbody tr:nth-child(even) {
+  background-color: #DEEFE7;
+}
+
+.cttsTabela tbody tr:hover {
+  background-color: #cfe9df;
+  transition: background-color 0.3s ease;
+}
+
+.cttsTabela td {
+  color: #00251F;
+  font-size: 16px;
+}
+
+.perfil-card {
+  background-color: #e6f7f0;
+  padding: 20px;
+  border-radius: 15px;
+  width: 800px;
+  display: flex;
+  gap: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo-perfil{
+  display: flex;
+  justify-content: center;
+}
+
+.coluna {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.campo {
+  font-size: 15px;
+}
+
+.label {
+  font-weight: bold;
+}

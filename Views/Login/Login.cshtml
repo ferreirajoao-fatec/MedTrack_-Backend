@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Pagina Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Medtrack</title>
+
+    <!-- Ícone que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon" asp-append-version="true" />
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
+
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <section class="container-login">
+
+            <!-- Imagem lateral -->
+            <div class="container-imagem">
+                <img src="~/imagens/imagem-header-login.svg" alt="Imagem da Página de Login" asp-append-version="true" />
+            </div>
+
+            <!-- Formulário -->
+            <div class="container-form">
+
+                <!-- Botão de modo escuro -->
+                <a href="#" id="dark-mode-toggle" class="theme-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
+
+                <!-- Voltar para home -->
+                <a class="seta" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <h1>Faça seu Login</h1>
+                <p class="texto">Seu espaço para cuidar da saúde.</p>
+
+                <!-- Redes sociais -->
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Formulário -->
+                <form class="login-form" method="post">
+
+                    <!-- E-mail -->
+                    <label class="label" for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="Digite o seu e-mail.">
+
+                    <!-- Senha -->
+                    <label class="label" for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite a sua senha.">
+
+                    <!-- Esqueceu a senha -->
+                    <div class="esqueceu-senha">
+                        <a asp-controller="Account" asp-action="ForgotPassword">Esqueceu a Senha?</a>
+                        <!-- Ajuste conforme sua rota real -->
+                    </div>
+
+                    <!-- Botão de login -->
+                    <input type="submit" value="Entrar" />
+                </form>
+            </div>
+
+            <!-- VLibras -->
+            <div vw class="enabled">
+                <div vw-access-button class="active"></div>
+                <div vw-plugin-wrapper>
+                    <div class="vw-plugin-top-wrapper"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Script de modo escuro -->
+    <script src="~/js/modo-escuro.js" asp-append-version="true"></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>
