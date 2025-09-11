@@ -7,4 +7,11 @@
     <RootNamespace>MedTrack_Projeto</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\NovaPasta\**" />
+    <Content Remove="Views\NovaPasta\**" />
+    <EmbeddedResource Remove="Views\NovaPasta\**" />
+    <None Remove="Views\NovaPasta\**" />
+  </ItemGroup>
+
 </Project>

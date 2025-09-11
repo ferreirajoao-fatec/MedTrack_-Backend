@@ -1,3 +1,4 @@
+wwwroot\css\cadastro.css
 wwwroot\css\formulario.css
 wwwroot\css\global.css
 wwwroot\css\home.css
@@ -16,7 +17,6 @@ wwwroot\imagens\dev-sophia.png
 wwwroot\imagens\email.svg
 wwwroot\imagens\imagem-fundo-circulo.svg
 wwwroot\imagens\imagem-header-cadastro.svg
-wwwroot\imagens\imagem-header-error.svg
 wwwroot\imagens\imagem-header-home.svg
 wwwroot\imagens\imagem-header-login.svg
 wwwroot\imagens\imagem-header-sobre.svg
@@ -51,4 +51,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\css\cadastro.css

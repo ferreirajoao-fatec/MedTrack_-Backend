@@ -186,8 +186,9 @@ position: relative;
 h1 {
 text-align: center;
 color: var(--cor-primaria);
-font-size: 32px;
+font-size: 40px;
 margin: 10px 0;
+font-family: var(--fonte-spectral);
 }
 
 .texto {

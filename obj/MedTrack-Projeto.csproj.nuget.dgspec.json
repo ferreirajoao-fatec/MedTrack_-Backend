@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-MedTrack-Projeto\\MedTrack-Projeto.csproj": {}
+    "C:\\Users\\StudySpace\\Downloads\\MedTrack-Projeto\\MedTrack-Projeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-MedTrack-Projeto\\MedTrack-Projeto.csproj": {
+    "C:\\Users\\StudySpace\\Downloads\\MedTrack-Projeto\\MedTrack-Projeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-MedTrack-Projeto\\MedTrack-Projeto.csproj",
+        "projectUniqueName": "C:\\Users\\StudySpace\\Downloads\\MedTrack-Projeto\\MedTrack-Projeto.csproj",
         "projectName": "MedTrack-Projeto",
-        "projectPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-MedTrack-Projeto\\MedTrack-Projeto.csproj",
+        "projectPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack-Projeto\\MedTrack-Projeto.csproj",
         "packagesPath": "C:\\Users\\StudySpace\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-MedTrack-Projeto\\obj\\",
+        "outputPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack-Projeto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
