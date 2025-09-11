@@ -1,8 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const NavBtnToggle = document.getElementById("nav-btn-toggle");
-  const NavMobile = document.getElementById("nav-mobile");
+// Vetor com os pares [botao, menu]
+const elementos = [
+["nav-btn-toggle", "nav-mobile"]
+];
 
-  NavBtnToggle.addEventListener("click", () => {
-    NavMobile.classList.toggle("open");
-  });
+// Percorrer o vetor
+for (let i = 0; i < elementos.length; i++) {
+const btn = document.getElementById(elementos[i][0]);
+const menu = document.getElementById(elementos[i][1]);
+
+if (btn && menu) {
+btn.addEventListener("click", () => {
+menu.classList.toggle("open");
+});
+}
+}
 });

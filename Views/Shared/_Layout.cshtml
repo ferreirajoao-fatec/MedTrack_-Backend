@@ -39,7 +39,7 @@ integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- Botões do menu (Login, Cadastro, Perfil e Menu Hamburguer) -->
 <div class="navbar-btn">
 <a class="navbar-btn-item" asp-controller="Login" asp-action="Login">Login</a>
-<a class="navbar-btn-item" asp-controller="Home" asp-action="Index">Cadastro</a>
+<a class="navbar-btn-item" asp-controller="Login" asp-action="Cadastro">Cadastro</a>
 <a class="navbar-btn-item" asp-controller="Home" asp-action="Index">Formulário</a>
 
 <!-- Ícone do modo claro/escuro -->
@@ -64,7 +64,7 @@ integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <li><a class="nav-items" asp-controller="Home" asp-action="Index">Home</a></li>
 <li><a class="nav-items" asp-controller="Home" asp-action="Sobre">Sobre</a></li>
 <li><a class="nav-items" asp-controller="Login" asp-action="Login">Login</a></li>
-<li><a class="nav-items" asp-controller="CHome" asp-action="Index">Cadastro</a></li>
+<li><a class="nav-items" asp-controller="Login" asp-action="Cadastro">Cadastro</a></li>
 <li><a class="nav-items" asp-controller="Home" asp-action="Index">Formulário</a></li>
 </ul>
 </div>
@@ -99,7 +99,7 @@ integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <a class="footer-link" asp-controller="Login" asp-action="Login">Login</a>
 </li>
 <li class="footer-item">
-<a class="footer-link"  asp-controller="Home" asp-action="Index">Cadastro</a>
+<a class="footer-link"  asp-controller="Login" asp-action="Cadastro">Cadastro</a>
 </li>
 <li class="footer-item">
 <a class="footer-link" asp-controller="Home" asp-action="Index">Formulário</a>
@@ -119,6 +119,7 @@ integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </p>
 </div>
 
+<script src="~/js/faq-accordion.js"></script>
 <script src="~/js/navbar-mobile.js"></script>
 <script src="~/js/modo-escuro.js"></script>
 <script src="~/js/voltar-topo.js"></script>

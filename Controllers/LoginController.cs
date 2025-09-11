@@ -8,5 +8,10 @@ namespace MedTrack_Projeto.Controllers
         {
             return View();
         }
+
+        public IActionResult Cadastro()
+        {
+            return View();
+        }
     }
 }
