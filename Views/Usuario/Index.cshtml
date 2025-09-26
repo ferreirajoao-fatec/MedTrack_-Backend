@@ -1,42 +1,42 @@
 ﻿@model List<Usuario>
 
 @{
-    ViewData["Title"] = "Usuário Page";
+ViewData["Title"] = "Lista de Usuários";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <p>
-    <a asp-action="Create">Novo Usuário</a>
+<a asp-action="Create">Novo Usuário</a>
 </p>
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Telefone</th>
-            <th>Senha</th>
-            <th>Confirmar Senha</th>
-            <th>Ações/Operações</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var usuario in Model)
-        {
-            <tr>
-                <td>@usuario.IdUsuario</td>
-                <td>@usuario.NomeUsuario</td>
-                <td>@usuario.EmailUsuario</td>
-                <td>@usuario.TelefoneUsuario</td>
-                <td>******</td>
-                <td>******</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@usuario.IdUsuario">Editar</a>
-                    <a asp-action="Remove" asp-route-id="@usuario.IdUsuario">Remover</a>
-                </td>
-            </tr>
-        }
-    </tbody>
+<thead>
+<tr>
+<th>Id</th>
+<th>Nome</th>
+<th>Email</th>
+<th>Telefone</th>
+<th>Senha</th>
+<th>Confirmar Senha</th>
+<th>Ações/Operações</th>
+</tr>
+</thead>
+<tbody>
+@foreach (var usuario in Model)
+{
+<tr>
+<td>@usuario.IdUsuario</td>
+<td>@usuario.NomeUsuario</td>
+<td>@usuario.EmailUsuario</td>
+<td>@usuario.TelefoneUsuario</td>
+<td>******</td>
+<td>******</td>
+<td>
+<a asp-action="Edit" asp-route-id="@usuario.IdUsuario">Editar</a> |
+<a asp-action="Delete" asp-route-id="@usuario.IdUsuario">Excluir</a>
+</td>
+</tr>
+}
+</tbody>
 </table>

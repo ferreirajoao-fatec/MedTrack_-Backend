@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
+using Microsoft.AspNetCore.Identity;
+
 namespace MedTrack_Projeto.Models
 {
     public class Usuario
@@ -20,6 +22,7 @@ namespace MedTrack_Projeto.Models
             SenhaUsuario = string.Empty;
             ConfirmarSenhaUsuario = "";
         }
+
         public Usuario(int idUsuario, string nomeUsuario, string emailUsuario, string telefoneUsuario, string senhaUsuario, string confirmarSenhaUsuario)
         {
             IdUsuario = idUsuario;
@@ -31,4 +34,3 @@ namespace MedTrack_Projeto.Models
         }
     }
 }
-

@@ -1,0 +1,492 @@
+/* ---------------- IMPORTAÇÃO DE FONTES ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* ---------------- RESET BÁSICO ---------------- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------- BODY E MAIN ---------------- */
+body,
+main {
+    width: 100%;
+    font-family: var(--fonte-montserrat);
+    background-color: var(--cor-branco);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* ---------------- VARIÁVEIS GLOBAIS ---------------- */
+:root {
+    --fonte-montserrat: "Montserrat", sans-serif;
+    --fonte-karla: "Karla", sans-serif;
+    --fonte-spectral: "Spectral", serif;
+    --cor-preto: #000000;
+    --cor-primaria: #00614C;
+    --cor-secundaria: #00AD88;
+    --cor-cinza: #B4BEC9;
+    --cor-branco: #FAFAFA;
+}
+
+/* Botão flutuante "Voltar ao Topo" */
+
+#btnTopo {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 12px #00000040;
+    transition: all 0.3s ease-in-out;
+}
+
+#btnTopo:hover {
+    background-color: var(--cor-primaria);
+    box-shadow: 0 8px 16px var(--cor-preto);
+}
+
+
+/* Botão de alternar modo escuro/claro */
+#dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    font-size: 19px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+    text-decoration: none;
+}
+
+/* Hover do botão */
+#dark-mode-toggle:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-preto);
+}
+
+#dark-mode-toggle i {
+    pointer-events: none;
+}
+
+/* ---------------- MODO ESCURO OTIMIZADO ---------------- */
+body.dark-mode {
+    --cor-preto: #FAFAFA;
+    --cor-primaria: #00AD88;
+    --cor-secundaria: #00614C;
+    --cor-cinza: #B4BEC9;
+    --cor-branco: #000000;
+}
+
+/* ---------------- BOTÕES ---------------- */
+body.dark-mode #btnTopo,
+body.dark-mode .navbar-btn-item {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+body.dark-mode #btnTopo:hover,
+body.dark-mode .navbar-btn-item:hover {
+    background-color: var(--cor-cinza);
+    color: var(--cor-branco);
+}
+
+/* ---------------- TEXTO GERAL ---------------- */
+body.dark-mode .logotipo p,
+body.dark-mode .navbar-item,
+body.dark-mode .navbar {
+    color: var(--cor-preto);
+}
+
+/* Destaques e hovers */
+body.dark-mode .header-number:hover,
+body.dark-mode .title-header span,
+body.dark-mode .card-quote-testimonial:hover,
+body.dark-mode .testimonial-start:hover {
+    color: var(--cor-primaria);
+}
+
+/* ---------------- FOOTER ---------------- */
+body.dark-mode .footer,
+body.dark-mode .copyright {
+    background-color: var(--cor-preto);
+}
+
+body.dark-mode .copyright {
+    border-top: 1px solid var(--cor-cinza);
+}
+
+body.dark-mode .text-copyright,
+body.dark-mode .footer-link,
+body.dark-mode .navbar {
+    color: var(--cor-branco);
+}
+
+body.dark-mode .footer-link:hover {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+
+body.dark-mode .footer-social-link {
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+}
+
+body.dark-mode .footer-social-link:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-branco);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor-branco);
+    padding: 15px 30px;
+}
+
+.navbar-logo {
+    width: 50px;
+}
+
+.logotipo {
+    display: flex;
+    align-items: center;
+}
+
+.logotipo p {
+    font-size: 19px;
+    margin-left: 10px;
+    font-family: var(--fonte-karla);
+    margin-top: 15px;
+    font-weight: 450;
+}
+
+/* Lista de links principais */
+.navbar-list {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+    margin-top: 15px;
+}
+
+.navbar-item {
+    color: var(--cor-preto);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.6s ease;
+    font-weight: 450;
+}
+
+.navbar-item:hover {
+    border-bottom: 2px solid var(--cor-primaria);
+    padding-bottom: 7px;
+}
+
+/* Botões (Login, Cadastro, Formulário) */
+.navbar-btn {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.navbar-btn-item {
+    text-decoration: none;
+    color: var(--cor-branco);
+    background-color: var(--cor-primaria);
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+    font-family: var(--fonte-karla);
+    font-size: 18px;
+}
+
+.navbar-btn-item:hover {
+    color: var(--cor-preto);
+    background-color: var(--cor-secundaria);
+}
+
+/* Ícone do perfil */
+.navbar-btn-profile {
+    font-size: 21px;
+    color: var(--cor-primaria);
+    transition: color 0.6s ease;
+}
+
+.navbar-btn-profile:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ---------------- NAVBAR MOBILE ---------------- */
+.navbar-mobile {
+    display: none;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    padding: 30px;
+    background-color: var(--cor-branco);
+}
+
+.nav-list-mobile {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+}
+
+.nav-list-mobile li {
+    width: 100%;
+    border-radius: 6px;
+    transition: background-color 0.6s ease;
+}
+
+.nav-items {
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    text-decoration: none;
+    color: var(--cor-preto);
+    text-align: center;
+    border-radius: 6px;
+    transition: color 0.6s ease;
+    font-weight: 450;
+}
+
+/* Hover no mobile */
+.nav-list-mobile li:hover {
+    background-color: var(--cor-primaria);
+}
+
+.nav-list-mobile li:hover .nav-items {
+    color: var(--cor-branco);
+}
+
+/* Botão hamburguer (mostrado no mobile) */
+#nav-btn-toggle {
+    display: none;
+    color: var(--cor-primaria);
+    font-size: 21px;
+    transition: color 0.6s ease, transform 0.6s ease;
+}
+
+#nav-btn-toggle:hover {
+    color: var(--cor-secundaria);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* ---------------- SEÇÃO DE RODAPÉ ---------------- */
+
+/* Container principal do rodapé */
+.footer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+    background-color: var(--cor-primaria);
+    display: flex;
+}
+
+/* Área de ícones sociais */
+.footer-social {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* Cada link social */
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.8s ease, color 0.8s ease, transform 0.6s ease;
+}
+
+/* Efeito hover nos links sociais */
+.footer-social-link:hover {
+    background-color: var(--cor-branco);
+    color: var(--cor-primaria);
+}
+
+/* Lista de links do rodapé */
+.footer-menu {
+    display: flex;
+    padding-top: 20px;
+    font-size: 16px;
+}
+
+/* Item individual da lista do rodapé */
+.footer-item {
+    list-style: none;
+    margin: 0 10px;
+}
+
+/* Link do rodapé */
+.footer-link {
+    text-decoration: none;
+    color: var(--cor-branco);
+    transition: color 0.6s ease;
+    font-weight: 450;
+}
+
+/* Efeito hover nos links do rodapé */
+.footer-link:hover {
+    border-bottom: 2px solid var(--cor-preto);
+    padding-bottom: 6px;
+    color: var(--cor-preto);
+}
+
+/* ---------------- SEÇÃO DE COPYRIGHT ---------------- */
+
+/* Container da área de copyright */
+.copyright {
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    font-family: var(--fonte-karla);
+    padding: 15px;
+}
+
+/* Texto dentro da área de copyright */
+.text-copyright {
+    margin: 10px 20px;
+}
+
+/* ---------------- SEÇÃO DE COPYRIGHT ---------------- */
+
+/* Container da área de copyright */
+.copyright {
+    text-align: center;
+    font-size: 16px;
+    background-color: var(--cor-preto);
+    color: var(--cor-branco);
+    font-family: var(--fonte-karla);
+    padding: 15px;
+}
+
+/* Texto dentro da área de copyright */
+.text-copyright {
+    margin: 10px 20px;
+}
+
+/* ------------------- RESPONSIVIDADE ------------------- */
+
+/* Até 532px (celulares médios) */
+@media (max-width: 532px) {
+
+    /* Footer */
+    .footer,
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .footer-menu {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .text-copyright {
+        font-size: 13px;
+        padding: 15px;
+    }
+
+    /* Navbar */
+    .nav-items {
+        font-size: 14px;
+    }
+
+    .logotipo p {
+        font-size: 16px;
+    }
+
+}
+
+/* Até 880px (telas médias) */
+@media (max-width: 880px) {
+
+    /* Navbar Mobile */
+    .navbar-list,
+    .navbar-btn-item {
+        display: none;
+    }
+
+    #nav-btn-toggle {
+        display: block;
+    }
+
+    .navbar-mobile.open {
+        display: block;
+    }
+}
+
+/* Até 1100px (desktops médios / tablets em landscape) */
+@media (max-width: 1100px) {
+
+    /* Footer */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 10px 0;
+    }
+
+    .text-copyright {
+        font-size: 13px;
+        padding: 10px 0;
+        text-align: center;
+    }
+}

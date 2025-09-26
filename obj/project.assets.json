@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\StudySpace\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj",
+      "projectUniqueName": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-Teste\\MedTrack_Projeto.csproj",
       "projectName": "MedTrack_Projeto",
-      "projectPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj",
+      "projectPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-Teste\\MedTrack_Projeto.csproj",
       "packagesPath": "C:\\Users\\StudySpace\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_Projeto\\obj\\",
+      "outputPath": "C:\\Users\\StudySpace\\Downloads\\MedTrack_-Backend-Teste\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
