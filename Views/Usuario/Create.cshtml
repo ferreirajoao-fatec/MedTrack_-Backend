@@ -1,0 +1,34 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Criar Usuário";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Nome</label>
+        <input asp-for="NomeUsuario" />
+    </div>
+    <div>
+        <label>Email</label>
+        <input asp-for="EmailUsuario" />
+    </div>
+    <div>
+        <label>Telefone</label>
+        <input asp-for="TelefoneUsuario" />
+    </div>
+    <div>
+        <label>Senha</label>
+        <input asp-for="SenhaUsuario" type="password" />
+    </div>
+    <div>
+        <label>Confirmar Senha</label>
+        <input asp-for="ConfirmarSenhaUsuario" type="password" />
+    </div>
+    <button type="submit">Salvar</button>
+</form>
+<p>
+    <a asp-action="Index">Voltar</a>
+</p>
