@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|c:\\users\\ferre\\onedrive\\documentos\\medtrack_pi\\medtrack_-backend\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|solutionrelative:views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|c:\\users\\ferre\\onedrive\\documentos\\medtrack_pi\\medtrack_-backend\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|c:\\users\\ferre\\onedrive\\documentos\\medtrack_pi\\medtrack_-backend\\views\\usuario\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|solutionrelative:views\\usuario\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|c:\\users\\ferre\\onedrive\\documentos\\medtrack_pi\\medtrack_-backend\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|solutionrelative:views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{10BC4B1C-D624-4AD7-97DA-872AAF7B844A}|MedTrack_Projeto.csproj|c:\\users\\ferre\\onedrive\\documentos\\medtrack_pi\\medtrack_-backend\\views\\usuario\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -42,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +62,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Delete.cshtml",
               "DocumentMoniker": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\Views\\Usuario\\Delete.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\Delete.cshtml",
@@ -70,11 +70,12 @@
               "RelativeToolTip": "Views\\Usuario\\Delete.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-09-26T15:30:44.684Z"
+              "WhenOpened": "2025-09-26T15:30:44.684Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\Views\\Usuario\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuario\\Edit.cshtml",
@@ -87,13 +88,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCQAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAUwF0AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-26T15:28:55.485Z",
               "EditorCaption": ""

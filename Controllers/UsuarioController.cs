@@ -90,6 +90,22 @@ namespace MedTrack_Projeto.Controllers
                 return NotFound();
             }
 
+            //exibe a view de confirmação com usuario selecionado. 
+            return View(usuario);
+        }
+
+        // 2.2.6 CRUD => DeleteConfirmed(HttpPost e ActionName("Delete")): Verifica se o usuario deve ser removido
+                                                                        //da lista de usuario, caso positivo remove o usuario
+                                                                        //da lista de usuarios, caso negativo, não remove
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var usuario = usuarios.FirstOrDefault(u => u.IdUsuario == id);
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
             usuarios.Remove(usuario);
             return RedirectToAction("Index");
         }
