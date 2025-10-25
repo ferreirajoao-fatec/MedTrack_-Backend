@@ -1,0 +1,191 @@
+﻿:root {
+    --fonte-montserrat: "Montserrat", sans-serif;
+    --fonte-karla: "Karla", sans-serif;
+    --fonte-spectral: "Spectral", serif;
+    --cor-preto: #000000;
+    --cor-primaria: #00614C;
+    --cor-secundaria: #00AD88;
+    --cor-cinza: #B4BEC9;
+    --cor-branco: #FAFAFA;
+}
+
+/* ====== Corpo e fontes ====== */
+body {
+    font-family: var(--fonte-montserrat);
+    background-color: var(--cor-branco);
+    color: var(--cor-preto);
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== Containers ====== */
+.container-crud {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== Cabeçalhos ====== */
+h1, h2, h3, h4 {
+    font-family: var(--fonte-montserrat);
+    color: var(--cor-primaria);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ====== Formulários ====== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    form .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form label {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+
+    form input,
+    form textarea,
+    form select {
+        padding: 10px;
+        border: 1px solid var(--cor-cinza);
+        border-radius: 8px;
+        font-size: 1rem;
+        font-family: var(--fonte-montserrat);
+        text-align: center;
+    }
+
+        form input:focus,
+        form textarea:focus,
+        form select:focus {
+            outline: none;
+            border-color: var(--cor-secundaria);
+            box-shadow: 0 0 5px var(--cor-secundaria);
+        }
+
+/* ====== Botões ====== */
+.btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: var(--fonte-montserrat);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+    .btn-primary:hover {
+        background-color: var(--cor-secundaria);
+    }
+
+.btn-secondary {
+    background-color: var(--cor-cinza);
+    color: var(--cor-preto);
+}
+
+    .btn-secondary:hover {
+        background-color: #9aa3ad;
+    }
+
+.btn-danger {
+    background-color: #d9534f;
+    color: var(--cor-branco);
+}
+
+    .btn-danger:hover {
+        background-color: #c9302c;
+    }
+
+.btn-success {
+    background-color: #00614C;
+    color: var(--cor-branco);
+}
+
+    .btn-success:hover {
+        background-color: #00AD88;
+    }
+
+/* ====== Tabelas ====== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    font-family: var(--fonte-montserrat);
+}
+
+    table th,
+    table td {
+        border: 1px solid var(--cor-cinza);
+        padding: 12px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    table th {
+        background-color: var(--cor-primaria);
+        color: var(--cor-branco);
+        font-weight: 600;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #f8f9fa;
+    }
+
+    table tr:hover {
+        background-color: #e6f7f1;
+    }
+
+/* ====== Links ====== */
+a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+
+    a:hover {
+        color: var(--cor-secundaria);
+        text-decoration: underline;
+    }
+
+/* ====== Mensagens de validação ====== */
+.text-danger {
+    font-size: 0.9rem;
+}
+
+/* ====== Cards para detalhes ====== */
+.card {
+    background-color: var(--cor-branco);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* ====== Responsividade ====== */
+@media (max-width: 768px) {
+    .container-crud {
+        padding: 15px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

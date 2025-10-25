@@ -1,0 +1,214 @@
+﻿@{
+ViewData["Title"] = "Página Perfil";
+Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cartão de Dados</title>
+<link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon" asp-append-version="true">
+<link rel="stylesheet" href="~/css/perfil.css" asp-append-version="true">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+<div class="container">
+<div class="perfil">
+<div class="foto-perfil">
+<span>Foto de Perfil</span>
+<div class="editar"><a href="https://www.google.com.br/?hl=pt-BR" target="blank"><i class="bi bi-camera"></i></a></div>
+</div>
+<div class="nome">
+<input type="text" placeholder="Nome e sobrenome" />
+</div>
+</div>
+<div class="botoes">
+<button id="dados">Dados</button>
+<div id="myModal-dados" class="modal-dados">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="conteudo">
+        <div class="conteudo-perfil">
+            <div class="perfil-card">
+                <div class="coluna">
+                    <div class="campo"><span class="label">Nome:</span> João da Silva</div>
+                    <div class="campo"><span class="label">CPF:</span> 123.456.789-00</div>
+                    <div class="campo"><span class="label">Dt Nasc.:</span> 15/03/1990</div>
+                    <div class="campo"><span class="label">Peso:</span> 70kg</div>
+                </div>
+                <div class="coluna">
+                    <div class="campo"><span class="label">Sexo:</span> Masculino</div>
+                    <div class="campo"><span class="label">Altura:</span> 1,75m</div>
+                    <div class="campo"><span class="label">Tipo Sanguíneo:</span> O+</div>
+                    <div class="campo"><span class="label">S.U.S:</span> 012.3456.7898.7654</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<button id="cttsEmergencia">Contatos de emergência</button>
+<div id="myModal-ctts" class="modal-ctts">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="conteudo">
+        <div>
+            <table class="cttsTabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Relacionamento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João</td>
+                        <td>11111-1111</td>
+                        <td>Tio</td>
+                    </tr>
+                    <tr>
+                        <td>Nicolas</td>
+                        <td>22222-2222</td>
+                        <td>Primo</td>
+                    </tr>
+                    <tr>
+                        <td>José</td>
+                        <td>33333-3333</td>
+                        <td>Irmão</td>
+                    </tr>
+                    <tr>
+                        <td>Gustavo</td>
+                        <td>44444-4444</td>
+                        <td>Tio</td>
+                    </tr>
+                    <tr>
+                        <td>Mariana</td>
+                        <td>55555-5555</td>
+                        <td>Irmã</td>
+                    </tr>
+                    <tr>
+                        <td>Sophia</td>
+                        <td>77777-777</td>
+                        <td>Prima</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</div>
+<button id="remedios">Remédios</button>
+<div id="myModal-remed" class="modal-remed">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="conteudo">
+        <div>
+            <table class="cttsTabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Dosagem</th>
+                        <th>Frequência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Losartana</td>
+                        <td>50 mg</td>
+                        <td>Uma vez ao dia</td>
+                    </tr>
+                    <tr>
+                        <td>Levotiroxina</td>
+                        <td>75 mcg</td>
+                        <td>Uma vez ao dia, em jejum</td>
+                    </tr>
+                    <tr>
+                        <td>Metformina</td>
+                        <td>850 mg</td>
+                        <td>2 vezes ao dia</td>
+                    </tr>
+                    <tr>
+                        <td>Sinvastatina</td>
+                        <td>20 mg</td>
+                        <td>Uma vez ao dia, à noite</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+</div>
+<button id="alergias">Alergias</button>
+    <button id="voltar" onclick="window.location.href='/'">Voltar</button>
+
+<div id="myModal-alerg" class="modal-alerg">
+<div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="conteudo">
+        <div>
+            <table class="cttsTabela">
+                <thead>
+                    <tr>
+                        <th>Remédios</th>
+                        <th>Comida</th>
+                        <th>Material</th>
+                        <th>reação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Penicilina</td>
+                        <td>Leite</td>
+                        <td>Látex</td>
+                        <td>Erupção cutânea, dificuldade para respirar</td>
+                    </tr>
+                    <tr>
+                        <td>Ibuprofeno</td>
+                        <td>Amendoim</td>
+                        <td>Níquel</td>
+                        <td>Inchaço, coceira, choque anafilático</td>
+                    </tr>
+                    <tr>
+                        <td>Aspirina</td>
+                        <td>Frutos do mar</td>
+                        <td>Poeira</td>
+                        <td>Urticária, problemas respiratórios</td>
+                    </tr>
+                    <tr>
+                        <td>Dipirona</td>
+                        <td>Morango</td>
+                        <td>Mofo</td>
+                        <td>Náusea, dor abdominal, irritação na pele</td>
+                    </tr>
+                    <tr>
+                        <td>Cetirizina</td>
+                        <td>Ovo</td>
+                        <td>Produtos químicos</td>
+                        <td>Espirros, olhos lacrimejando, dermatite</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script src="~/js/perfil.js" asp-append-version="true"></script>
+</body>
+
+</html>

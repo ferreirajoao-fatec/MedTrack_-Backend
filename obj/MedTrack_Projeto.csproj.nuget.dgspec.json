@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\MedTrack_Projeto.csproj": {}
+    "C:\\Users\\maria\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\MedTrack_Projeto.csproj": {
+    "C:\\Users\\maria\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\MedTrack_Projeto.csproj",
+        "projectUniqueName": "C:\\Users\\maria\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj",
         "projectName": "MedTrack_Projeto",
-        "projectPath": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\MedTrack_Projeto.csproj",
-        "packagesPath": "C:\\Users\\ferre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ferre\\OneDrive\\Documentos\\MedTrack_PI\\MedTrack_-Backend\\obj\\",
+        "projectPath": "C:\\Users\\maria\\Downloads\\MedTrack_Projeto\\MedTrack_Projeto.csproj",
+        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maria\\Downloads\\MedTrack_Projeto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ferre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -50,6 +49,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -69,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

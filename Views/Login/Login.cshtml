@@ -1,0 +1,116 @@
+﻿@{
+    Layout = null; // Não usa o layout padrão
+    ViewData["Title"] = "Login Medtrack";
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+
+    <!-- Ícone da aba -->
+    <link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon">
+
+    <!-- Bootstrap 5.3.8 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS único desta página -->
+    <link rel="stylesheet" href="~/css/auth.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+    <main class="d-flex align-items-center justify-content-center min-vh-100">
+        <!-- Container principal -->
+        <section class="container-login d-flex flex-wrap shadow rounded overflow-hidden">
+
+            <!-- Coluna imagem -->
+            <div class="container-imagem-1 d-flex align-items-center justify-content-center p-3 col-12 col-md-6">
+                <img src="~/imagens/imagem-header-login.svg" alt="Imagem da Página de Login" class="img-fluid rounded">
+            </div>
+
+            <!-- Coluna formulário -->
+            <div class="container-form position-relative col-12 col-md-6 p-4">
+
+                <!-- Botão modo escuro -->
+                <a href="#" id="dark-mode-toggle"
+                   class="theme-toggle btn btn-sm rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="fa-solid fa-moon"></i>
+                </a>
+
+                <!-- Botão voltar -->
+                <a class="seta btn btn-sm d-flex align-items-center justify-content-center" asp-controller="Home" asp-action="Index">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+
+                <!-- Título -->
+                <h1 class="text-center title-form mt-5">FAÇA SEU LOGIN</h1>
+                <p class="texto text-center">Seu espaço para cuidar da saúde.</p>
+
+                <!-- Ícones de login via redes sociais -->
+                <div class="icons">
+                    <a href="#"><i class="fa-brands fa-google"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+
+                <!-- Formulário -->
+                <form asp-action="Login" method="post" class="login-form">
+
+                    <div class="mb-2">
+                        <label for="email" class="form-label">E-mail:</label>
+                        <input type="email" id="email" name="Email" class="form-control"
+                               placeholder="Digite o seu e-mail." required>
+                    </div>
+
+                    <div class="mb-2">
+                        <label for="senha" class="form-label">Senha:</label>
+                        <input type="password" id="senha" name="Senha" class="form-control"
+                               placeholder="Digite a sua senha." required>
+                    </div>
+
+                    <!-- Link esqueceu senha -->
+                    <div class="esqueceu-senha text-end mb-2">
+                        <a asp-controller="Home" asp-action="Index">Esqueceu a senha?</a>
+                    </div>
+
+                    <!-- Botão enviar -->
+                    <button type="submit" class="btn w-100">Entrar</button>
+
+                    <!-- Link cadastro -->
+                    <div class="esqueceu-senha text-end mb-2">
+                        <a asp-controller="Login" asp-action="Cadastro">Ainda não tem conta? Cadastrar</a>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- VLibras -->
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Script modo escuro -->
+    <script src="~/js/modo-escuro.js"></script>
+
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+</html>

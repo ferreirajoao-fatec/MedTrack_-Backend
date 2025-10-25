@@ -1,4 +1,11 @@
+wwwroot\css\auth.css
+wwwroot\css\crud.css
+wwwroot\css\formulario.css
 wwwroot\css\geral.css
+wwwroot\css\main.css
+wwwroot\css\perfil.css
+wwwroot\css\profile.css
+wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\imagens\blob-haikei.svg
 wwwroot\imagens\dev-fernanda.jpeg
@@ -12,6 +19,8 @@ wwwroot\imagens\email.svg
 wwwroot\imagens\fundo.svg
 wwwroot\imagens\imagem-fundo-circulo.svg
 wwwroot\imagens\imagem-header-cadastro.svg
+wwwroot\imagens\imagem-header-erro.svg
+wwwroot\imagens\imagem-header-error.svg
 wwwroot\imagens\imagem-header-home.svg
 wwwroot\imagens\imagem-header-login.svg
 wwwroot\imagens\imagem-header-sobre.svg
@@ -33,6 +42,7 @@ wwwroot\js\faq-accordion.js
 wwwroot\js\modo-escuro.js
 wwwroot\js\navbar-mobile.js
 wwwroot\js\perfil.js
+wwwroot\js\site.js
 wwwroot\js\voltar-topo.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map

@@ -1,0 +1,226 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-color: #deefe7;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 200px;
+    height: 525px;
+    background-color: #009b794d;
+    padding-top: 25px;
+    border-radius: 15px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+}
+
+.foto-perfil {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #00251f;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+}
+
+.editar {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+    background-color: #009b7a;
+    color: black;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: 2px solid white;
+}
+
+    .editar a {
+        color: #00251f;
+    }
+
+.nome {
+    flex: 1;
+}
+
+    .nome input {
+        width: 100%;
+        padding: 5px 10px;
+        background-color: #ffffffc7;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+        .nome input:hover {
+            background-color: #e0e0e0;
+            color: black;
+        }
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    .botoes button {
+        padding: 12px;
+        background-color: #009b7a;
+        border: none;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+        .botoes button:hover {
+            background-color: #00251f;
+            color: #fefefe;
+        }
+
+/* Estilos gerais do modal */
+.modal-dados,
+.modal-ctts,
+.modal-remed,
+.modal-alerg {
+    display: none; /* inicia escondido */
+    position: fixed; /* fixa na tela */
+    z-index: 1000; /* acima de tudo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* scroll se necessário */
+    background-color: rgba(0, 0, 0, 0.4); /* fundo escuro transparente */
+}
+
+/* Conteúdo do modal */
+.modal-content {
+    position: relative; /* necessário para o X */
+    background-color: #fefefe;
+    margin: 10% auto; /* centralizado verticalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 12px;
+    width: 80%; /* largura da caixinha */
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão de fechar (X) */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    .close:hover {
+        color: #ff0000;
+    }
+
+/* Conteúdo interno (opcional para scroll interno) */
+.conteudo {
+    overflow-y: auto;
+    max-height: 70vh; /* altura máxima da caixinha antes de aparecer scroll */
+}
+
+/* Tabelas dentro do modal */
+.cttsTabela {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-family: "Karla", sans-serif;
+    background-color: #F1F1F1;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+    .cttsTabela thead {
+        background-color: #009B7A;
+        color: white;
+        text-align: left;
+    }
+
+    .cttsTabela th,
+    .cttsTabela td {
+        padding: 12px 16px;
+    }
+
+    .cttsTabela tbody tr:nth-child(even) {
+        background-color: #DEEFE7;
+    }
+
+    .cttsTabela tbody tr:hover {
+        background-color: #cfe9df;
+        transition: background-color 0.3s ease;
+    }
+
+    .cttsTabela td {
+        color: #00251F;
+        font-size: 16px;
+    }
+
+/* Perfil card dentro do modal */
+.perfil-card {
+    background-color: #e6f7f0;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    gap: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.conteudo-perfil {
+    display: flex;
+    justify-content: center;
+}
+
+.coluna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.campo {
+    font-size: 15px;
+}
+
+.label {
+    font-weight: bold;
+}

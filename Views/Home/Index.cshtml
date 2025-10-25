@@ -1,8 +1,265 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Seção do Cabeçalho -->
+<div class="div-header my-2 mx-1">
+
+<div class="row align-items-center">
+<!-- Texto do Header -->
+<div class="col-lg-6 mb-4 mb-lg-0">
+<h1 class="display-4 fw-bold title-header">
+Sua Vida Organizada para <span>Emergências</span>
+</h1>
+<p class="lead text-header">
+Em momentos críticos, cada segundo conta. Nossa planilha de
+emergência foi criada para reunir todas
+as informações essenciais de forma clara e acessível,
+ajudando você e seus entes queridos a agirem rápido quando mais importa.
+Com campos personalizados para contatos, histórico médico, alergias e orientações,
+garantimos que dados importantes estejam sempre à mão,
+facilitando o atendimento e salvando vidas.
+</p>
+
+<!-- Indicadores de Impacto -->
+<div class="d-flex flex-wrap gap-3 mt-4 header-info">
+<div class="text-center header-section-info">
+<p class="display-5 fw-bold header-number">700+</p>
+<p class="header-info-text">Vidas salvas em emergências</p>
 </div>
+<div class="text-center header-section-info">
+<p class="display-5 fw-bold header-number">3s</p>
+<p class="header-info-text">Acesso rápido a dados</p>
+</div>
+<div class="text-center header-section-info">
+<p class="display-5 fw-bold header-number">98%</p>
+<p class="header-info-text">Sucesso em emergências</p>
+</div>
+</div>
+</div>
+
+<!-- Imagem do Header -->
+<div class="col-lg-6 text-center">
+<img class="img-fluid image-header" src="../imagens/imagem-header-home.svg" alt="Imagem de um médico com uma prancheta">
+</div>
+</div>
+</div>
+
+
+<!-- Título da Seção e Cards com espaçamento Bootstrap -->
+<div class="container-fluid my-4 px-4">
+
+<!-- Título da Seção de Destaques -->
+<h2 class="title-card-info">Porque somos os melhores</h2>
+
+<!-- Seção de Destaques (Benefícios) -->
+<div class="row content-info-destaque justify-content-center">
+
+<!-- Card de Informações -->
+<div class="col-md-6 col-lg-3 mb-4">
+<section class="card-info-destaque">
+<span class="icon-info-destaque">
+<i class="fa-solid fa-house-chimney-medical"></i>
+</span>
+<p class="title-info-destaque">Acesso Rápido</p>
+<p class="text-info-destaque">
+Nosso sistema fornece dados de emergência em tempo real, garantindo agilidade e precisão quando cada segundo importa.
+</p>
+</section>
+</div>
+
+<!-- Card de Informações -->
+<div class="col-md-6 col-lg-3 mb-4">
+<section class="card-info-destaque">
+<span class="icon-info-destaque">
+<i class="fa-solid fa-laptop-medical"></i>
+</span>
+<p class="title-info-destaque">Tecnologia Segura e Confiável</p>
+<p class="text-info-destaque">
+Usamos plataformas seguras que protegem seus dados e garantem total privacidade, para você confiar.
+</p>
+</section>
+</div>
+
+<!-- Card de Informações -->
+<div class="col-md-6 col-lg-3 mb-4">
+<section class="card-info-destaque">
+<span class="icon-info-destaque">
+<i class="fa-solid fa-heart-pulse"></i>
+</span>
+<p class="title-info-destaque">Equipe Multidisciplinar</p>
+<p class="text-info-destaque">
+Profissionais experientes em saúde e tecnologia oferecem soluções focadas no cuidado e na segurança do paciente.
+</p>
+</section>
+</div>
+
+<!-- Card de Informações -->
+<div class="col-md-6 col-lg-3 mb-4">
+<section class="card-info-destaque">
+<span class="icon-info-destaque">
+<i class="fa-solid fa-briefcase-medical"></i>
+</span>
+<p class="title-info-destaque">Emergências</p>
+<p class="text-info-destaque">
+Acesso rápido e seguro ao histórico médico para decisões ágeis em emergências.
+</p>
+</section>
+</div>
+
+</div>
+</div>
+
+
+<!-- Título da seção de depoimentos -->
+<h2 class="title-card-testimonial text-center mb-4">
+Testemunhos reais com nossa solução
+</h2>
+
+<!-- Container Bootstrap maior e centralizado -->
+<div class="container-fluid my-5 px-2">
+<div class="row g-5 justify-content-center">
+
+<!-- Card de depoimento 1 -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<section class="card-testimonial">
+<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+<img class="card-image-testimonial" src="../imagens/imagem-testemunha-1.jpg" alt="Imagem de Renato Souza">
+<hr class="team-divider-testimonial">
+<p class="card-name-testimonial">Renato Souza</p>
+<div class="testimonial-start">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="card-text-testimonial">
+"Desde que começamos a usar a plataforma, percebemos uma melhora
+significativa na comunicação com nossos pacientes. As informações são claras e acessíveis."
+</p>
+</section>
+</div>
+
+<!-- Card de depoimento 2 -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<section class="card-testimonial">
+<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+<img class="card-image-testimonial" src="../imagens/imagem-testemunha-2.jpg" alt="Imagem de Camila Duarte">
+<hr class="team-divider-testimonial">
+<p class="card-name-testimonial">Camila Duarte</p>
+<div class="testimonial-start">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="card-text-testimonial">
+"A inovação dessa empresa transformou nosso dia a dia.
+A agilidade no atendimento e o acesso a dados confiáveis fizeram toda a diferença para mim."
+</p>
+</section>
+</div>
+
+<!-- Card de depoimento 3 -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<section class="card-testimonial">
+<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+<img class="card-image-testimonial" src="../imagens/imagem-testemunha-3.jpg" alt="Imagem de Lucas Almeida">
+<hr class="team-divider-testimonial">
+<p class="card-name-testimonial">Lucas Almeida</p>
+<div class="testimonial-start">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="card-text-testimonial">
+"Confio totalmente nas soluções que oferecem. A tecnologia aplicada com responsabilidade garante que possamos
+cuidar melhor de nossos pacientes, otimizando processos."
+</p>
+</section>
+</div>
+
+<!-- Card de depoimento 4 -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<section class="card-testimonial">
+<i class="card-quote-testimonial fa-solid fa-quote-left"></i>
+<img class="card-image-testimonial" src="../imagens/imagem-testemunha-4.jpg" alt="Imagem de Juliana Alves">
+<hr class="team-divider-testimonial">
+<p class="card-name-testimonial">Juliana Alves</p>
+<div class="testimonial-start">
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+<i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+</div>
+<p class="card-text-testimonial">
+"Em uma emergência com minha filha, o Med Track fez toda a diferença.
+Em segundos, os médicos tinham acesso ao histórico médico dela. Rápido, prático e seguro!"
+</p>
+</section>
+</div>
+
+</div>
+</div>
+
+
+<div class="container-fluid my-4 px-4">
+<div class="emergency-header" role="region" aria-labelledby="emergency-title">
+
+<div class="header-layout">
+<!-- Coluna esquerda -->
+<section>
+<h1 id="emergency-title" class="title-header">Central de Emergências</h1>
+<p class="lead-desc">Informações rápidas e práticas: contatos, primeiros socorros, kit e hospitais próximos.</p>
+
+<div class="row">
+<div class="col-12 col-md-6 mb-3">
+<div class="emergency-card h-100">
+<h3>Contatos de Emergência</h3>
+<ul class="list-unstyled mb-0">
+<li>SAMU - 192</li>
+<li>Bombeiros - 193</li>
+<li>Polícia - 190</li>
+</ul>
+</div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+<div class="emergency-card h-100">
+<h3>Dicas de Primeiros Socorros</h3>
+<ul class="list-unstyled mb-0">
+<li>Parar hemorragias com compressão direta</li>
+<li>Colocar vítima inconsciente de lado</li>
+<li>Não mover vítimas com fraturas graves</li>
+</ul>
+</div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+<div class="emergency-card h-100">
+<h3>Kit de Primeiros Socorros</h3>
+<ul class="list-unstyled mb-0">
+<li>Curativos</li>
+<li>Gaze</li>
+<li>Antisséptico</li>
+<li>Esparadrapo</li>
+<li>Tesoura</li>
+</ul>
+</div>
+</div>
+
+<div class="col-12 col-md-6 mb-3">
+<div class="emergency-card h-100">
+<h3>Hospitais Próximos</h3>
+<ul class="list-unstyled mb-0">
+<li>Hospital Central - Rua Principal, 123</li>
+<li>Hospital São João - Av. Saúde, 456</li>
+<li>Pronto Socorro Regional - Rua Emergência, 789</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Coluna direita: imagem -->
+<aside class="image-header-container">
+<img src="../imagens/imagem-info-home.svg" alt="Imagem ilustrativa de emergência" class="image-header">
+</aside>
+</div>
+</div>
+</div>
+
+

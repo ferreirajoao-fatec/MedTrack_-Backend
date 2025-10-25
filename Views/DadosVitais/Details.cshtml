@@ -1,0 +1,80 @@
+﻿@model MedTrack_Projeto.Models.DadosVitais
+
+@{
+    ViewData["Title"] = "Details - Dados Vitais";
+}
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS CRUD personalizado -->
+<link rel="stylesheet" href="~/css/crud.css" />
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h1 class="text-center mb-4">Detalhes - Dados Vitais</h1>
+                    <hr />
+
+                    <dl class="row text-start">
+                        <dt class="col-sm-4">Nome</dt>
+                        <dd class="col-sm-8">@Model.Nome</dd>
+
+                        <dt class="col-sm-4">CPF</dt>
+                        <dd class="col-sm-8">@Model.CPF</dd>
+
+                        <dt class="col-sm-4">Data de Nascimento</dt>
+                        <dd class="col-sm-8">@Model.DataNascimento?.ToString("dd/MM/yyyy")</dd>
+
+                        <dt class="col-sm-4">Sexo</dt>
+                        <dd class="col-sm-8">@Model.Sexo</dd>
+
+                        <dt class="col-sm-4">Altura</dt>
+                        <dd class="col-sm-8">@Model.Altura</dd>
+
+                        <dt class="col-sm-4">Peso</dt>
+                        <dd class="col-sm-8">@Model.Peso</dd>
+
+                        <dt class="col-sm-4">Tipo Sanguíneo</dt>
+                        <dd class="col-sm-8">@Model.TipoSanguineo</dd>
+
+                        <dt class="col-sm-4">SUS</dt>
+                        <dd class="col-sm-8">@Model.SUS</dd>
+
+                        <dt class="col-sm-4">Nome do Contato</dt>
+                        <dd class="col-sm-8">@Model.NomeContato</dd>
+
+                        <dt class="col-sm-4">Telefone do Contato</dt>
+                        <dd class="col-sm-8">@Model.TelefoneContato</dd>
+
+                        <dt class="col-sm-4">Relacionamento</dt>
+                        <dd class="col-sm-8">@Model.Relacionamento</dd>
+
+                        <dt class="col-sm-4">Medicamento</dt>
+                        <dd class="col-sm-8">@Model.Medicamento</dd>
+
+                        <dt class="col-sm-4">Dosagem</dt>
+                        <dd class="col-sm-8">@Model.Dosagem</dd>
+
+                        <dt class="col-sm-4">Frequência</dt>
+                        <dd class="col-sm-8">@Model.Frequencia</dd>
+
+                        <dt class="col-sm-4">Observações</dt>
+                        <dd class="col-sm-8">@Model.Observacoes</dd>
+                    </dl>
+
+                    <div class="d-flex justify-content-center gap-2 mt-4">
+                        <a asp-action="Edit" asp-route-id="@Model.IdUsuario" class="btn btn-primary">Edit</a>
+                        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+}

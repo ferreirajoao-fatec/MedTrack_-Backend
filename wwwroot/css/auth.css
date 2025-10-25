@@ -1,0 +1,561 @@
+/* ---------------- FONTS ---------------- */
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+/* ---------------- RESET ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fonte-montserrat: "Montserrat", sans-serif;
+    --fonte-karla: "Karla", sans-serif;
+    --fonte-spectral: "Spectral", serif;
+    --cor-preto: #000000;
+    --cor-primaria: #00614C;
+    --cor-secundaria: #00AD88;
+    --cor-cinza: #B4BEC9;
+    --cor-branco: #FAFAFA;
+}
+
+/* ---------------- MODO ESCURO OTIMIZADO ---------------- */
+body.dark-mode {
+    --cor-preto: #FAFAFA;
+    --cor-primaria: #00AD88;
+    --cor-secundaria: #00614C;
+    --cor-cinza: #B4BEC9;
+    --cor-branco: #000000;
+}
+
+body.dark-mode .container-login,
+body.dark-mode .container-form,
+body.dark-mode .container-imagem,
+body.dark-mode .container-imagem-1 {
+    background-color: var(--cor-branco);
+    border-color: #333;
+}
+
+body.dark-mode .title-form,
+body.dark-mode .texto,
+body.dark-mode .form-label,
+body.dark-mode .esqueceu-senha a,
+body.dark-mode input.form-control {
+    color: var(--cor-preto);
+}
+
+body.dark-mode .esqueceu-senha a:hover {
+    color: var(--cor-primaria);
+}
+
+body.dark-mode .icons a {
+    border: 1px solid var(--cor-preto);
+}
+
+/* Placeholder branco apenas no modo escuro */
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+    color: var(--cor-preto);
+    opacity: 1;
+}
+
+
+body.dark-mode input.form-control {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+}
+
+body.dark-mode button.btn,
+body.dark-mode input[type=submit] {
+    background-color: var(--cor-secundaria);
+}
+
+body.dark-mode button.btn:hover,
+body.dark-mode input[type=submit]:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-preto);
+}
+
+
+/* ---------------- BASE BODY ---------------- */
+body,
+html {
+    height: 100%;
+    font-family: var(--fonte-montserrat);
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, #000000 0%, #00614C 100%);
+    padding: 20px;
+}
+
+/* ---------------- CONTAINER PRINCIPAL ---------------- */
+.container-login {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    width: 100%;
+    background-color: var(--cor-branco);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ---------------- COLUNA IMAGEM ---------------- */
+.container-imagem {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-branco);
+    background-image: url(../imagens/blob-haikei.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.container-imagem-1 {
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--cor-branco);
+    background-image: url(../imagens/blob-haikei.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.container-imagem img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.container-imagem-1 img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* ---------------- COLUNA FORMULÁRIO ---------------- */
+.container-form {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 30px 20px 30px;
+    position: relative;
+    background-color: var(--cor-branco);
+    border-left: 1px solid #e6e6e6;
+}
+
+/* Título */
+.title-form {
+    font-family: var(--fonte-spectral);
+    text-align: center;
+    color: var(--cor-primaria);
+    font-size: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.texto {
+    font-family: var(--fonte-karla);
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--cor-preto);
+    font-weight: 400;
+}
+
+/* ---------------- FORMULÁRIO ---------------- */
+.login-form .form-label {
+    font-weight: 500;
+    margin-top: 5px;
+    color: var(--cor-preto);
+}
+
+.login-form .form-control {
+    border-radius: 5px;
+    border: 1px solid var(--cor-branco);
+    padding-left: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: border 0.3s ease, background 0.3s ease;
+}
+
+.login-form .form-control:focus {
+    outline: none;
+    border-color: var(--cor-cinza);
+}
+
+/* ---------------- Ícones dentro dos inputs ---------------- */
+input#nome,
+input#cpf {
+    background: url('../imagens/text.svg') no-repeat 10px center;
+}
+
+input#email,
+input#confirmar-email {
+    background: url('../imagens/email.svg') no-repeat 10px center;
+}
+
+input#senha,
+input#confirmar-senha {
+    background: url('../imagens/senha.svg') no-repeat 10px center;
+}
+
+input#nome,
+input#cpf,
+input#email,
+input#confirmar-email,
+input#senha,
+input#confirmar-senha {
+    background-size: 25px;
+    padding-left: 40px;
+    border: 1px solid #dbdbdb;
+}
+
+.login-form .form-control {
+    background-size: 20px;
+}
+
+/* Botão submit */
+.login-form button,
+.login-form input[type=submit] {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    font-family: (--fonte-karla);
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.8s ease, color 0.8s ease;
+}
+
+.login-form button:hover,
+.login-form input[type=submit]:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.icons a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: var(--cor-primaria);
+    font-size: 21px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #0000001a;
+    transition: background 0.8s ease, color 0.8s ease;
+}
+
+.icons a:hover {
+    color: #fff;
+    background-color: var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+
+.icons a:hover {
+    color: var(--cor-branco);
+    background-color: var(--cor-primaria);
+    transform: scale(1.05);
+}
+
+/* ---------------- LINK LOGIN ---------------- */
+.esqueceu-senha {
+    text-align: right;
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.esqueceu-senha a {
+    font-family: (--fonte-karla);
+    color: var(--cor-primaria);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.esqueceu-senha a:hover {
+    color: var(--cor-secundaria);
+}
+
+/* ---------------- BOTÕES MODO ESCURO/CLARO ---------------- */
+#dark-mode-toggle,
+.seta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 10;
+}
+
+#dark-mode-toggle {
+    top: 0px;
+    left: 0px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* ---------------- BOTÕES MODO ESCURO/CLARO ---------------- */
+#dark-mode-toggle,
+.seta {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 10;
+}
+
+#dark-mode-toggle {
+    top: 0px;
+    left: 0px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border-radius: 0;
+}
+
+#dark-mode-toggle:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.seta {
+    top: 0px;
+    right: 0px;
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+    border-radius: 0px;
+}
+
+.seta:hover {
+    background-color: var(--cor-secundaria);
+}
+
+
+.seta:hover {
+    background-color: var(--cor-secundaria);
+}
+
+.rounded-circle {
+    border-radius: 0 !important;
+}
+
+/* ---------------- RESPONSIVIDADE APRIMORADA ---------------- */
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+
+    .icons {
+        gap: 6px;
+    }
+
+    .icons a {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    input#nome,
+    input#cpf,
+    input#email,
+    input#confirmar-email,
+    input#senha,
+    input#confirmar-senha {
+        background-size: 18px;
+        padding-left: 30px;
+    }
+
+    .title-form {
+        font-size: 24px;
+    }
+
+    .texto {
+        font-size: 13px;
+    }
+
+    .login-form .form-control {
+        padding: 8px 12px 8px 30px;
+        font-size: 13px;
+    }
+
+    .login-form button {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .esqueceu-senha {
+        font-size: 13px;
+    }
+
+    #dark-mode-toggle,
+    .seta {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .container-imagem img {
+        max-height: 300px;
+    }
+
+    .container-imagem-1 img {
+        max-height: 300px;
+    }
+}
+
+/* Tablets pequenos e celulares grandes */
+@media (max-width: 768px) {
+    .container-form {
+        border-left: none;
+        border-top: 1px solid var(--white);
+        padding: 25px 20px;
+    }
+
+    .icons {
+        gap: 7px;
+    }
+
+    .icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    input#nome,
+    input#cpf,
+    input#email,
+    input#confirmar-email,
+    input#senha,
+    input#confirmar-senha {
+        background-size: 20px;
+        padding-left: 35px;
+    }
+
+    .container-imagem img {
+        max-height: 350px;
+    }
+
+    .container-imagem-1 img {
+        max-height: 350px;
+    }
+
+    .title-form {
+        font-size: 28px;
+    }
+
+    .texto {
+        font-size: 14px;
+    }
+
+    .login-form .form-control {
+        padding: 10px 15px 10px 35px;
+        font-size: 14px;
+    }
+
+    .login-form button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* Tablets grandes e médios */
+@media (max-width: 992px) {
+    .container-login {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .icons {
+        gap: 8px;
+    }
+
+    .icons a {
+        width: 42px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .container-imagem,
+    .container-form {
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container-imagem img {
+        max-height: 470px;
+        object-fit: contain;
+        object-position: top;
+    }
+
+    .container-imagem-1,
+    .container-form {
+        flex: 1 1 100%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .container-imagem-1 img {
+        max-height: 470px;
+        object-fit: contain;
+        object-position: top;
+    }
+
+    .title-form {
+        font-size: 36px;
+    }
+
+    .texto {
+        font-size: 17px;
+    }
+
+    .login-form .form-control {
+        padding: 10px 15px 10px 40px;
+        font-size: 15px;
+    }
+
+    .login-form button {
+        font-size: 15px;
+        padding: 12px;
+    }
+
+    .esqueceu-senha {
+        font-size: 15px;
+    }
+}

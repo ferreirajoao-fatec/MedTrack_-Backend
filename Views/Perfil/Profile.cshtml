@@ -1,0 +1,190 @@
+﻿@{
+ViewData["Title"] = "Página Perfis";
+Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- CSS personalizado -->
+<link rel="stylesheet" href="~/css/profile.css" asp-append-version="true">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon" asp-append-version="true">
+
+<title>@ViewData["Title"]</title>
+</head>
+
+<body>
+<main class="container py-4">
+
+<!-- Filtro -->
+<section class="filter-container text-center mb-5">
+<h2 class="mb-3">BUSCAR PACIENTES</h2>
+<div class="filter-box mx-auto d-flex align-items-center gap-2">
+<input type="text" id="filter" class="form-control flex-grow-1" placeholder="Filtrar por nome ou idade...">
+<button type="button" id="filter-btn" class="btn btn-primary">
+<i class="fas fa-search"></i>
+</button>
+</div>
+</section>
+
+<!-- Cards -->
+<section class="cards container">
+<div class="row justify-content-center g-4">
+
+<!-- Lucas Fernandes -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<article class="card text-center" tabindex="0" onclick="window.location.href='/'">
+<div class="banner"></div>
+<div class="avatar">
+<img alt="Foto de perfil de Lucas Fernandes" src="~/imagens/imagem-perfil1.jpg"
+class="img-fluid rounded-circle" asp-append-version="true">
+</div>
+<div class="body card-body">
+<div class="name fw-bold">Lucas Fernandes <span class="age">23</span></div>
+<div class="city">Matão</div>
+<div class="stats d-flex justify-content-around mt-3">
+<div class="stat text-center">
+<div class="num fw-bold">1.78M</div>
+<div class="label">Altura</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">72</div>
+<div class="label">Peso</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">22,7</div>
+<div class="label">IMC</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Camila Sato -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<article class="card text-center" tabindex="0" onclick="window.location.href='/'">
+<div class="banner"></div>
+<div class="avatar">
+<img alt="Foto de perfil de Camila Sato" src="~/imagens/imagem-perfil2.jpg"
+class="img-fluid rounded-circle" asp-append-version="true">
+</div>
+<div class="body card-body">
+<div class="name fw-bold">Camila Sato <span class="age">29</span></div>
+<div class="city">Matão</div>
+<div class="stats d-flex justify-content-around mt-3">
+<div class="stat text-center">
+<div class="num fw-bold">1.65M</div>
+<div class="label">Altura</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">58</div>
+<div class="label">Peso</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">21,3</div>
+<div class="label">IMC</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Antônio Ribeiro -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<article class="card text-center" tabindex="0" onclick="window.location.href='/'">
+<div class="banner"></div>
+<div class="avatar">
+<img alt="Foto de perfil de Antônio Ribeiro" src="~/imagens/imagem-perfil3.jpg"
+class="img-fluid rounded-circle" asp-append-version="true">
+</div>
+<div class="body card-body">
+<div class="name fw-bold">Antônio Ribeiro <span class="age">70</span></div>
+<div class="city">Matão</div>
+<div class="stats d-flex justify-content-around mt-3">
+<div class="stat text-center">
+<div class="num fw-bold">1.72M</div>
+<div class="label">Altura</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">75</div>
+<div class="label">Peso</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">25,3</div>
+<div class="label">IMC</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+<!-- Júlia Martins -->
+<div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-center">
+<article class="card text-center" tabindex="0" onclick="window.location.href='/'">
+<div class="banner"></div>
+<div class="avatar">
+<img alt="Foto de perfil de Júlia Martins" src="~/imagens/imagem-perfil4.jpg"
+class="img-fluid rounded-circle" asp-append-version="true">
+</div>
+<div class="body card-body">
+<div class="name fw-bold">Júlia Martins <span class="age">26</span></div>
+<div class="city">Matão</div>
+<div class="stats d-flex justify-content-around mt-3">
+<div class="stat text-center">
+<div class="num fw-bold">1.63M</div>
+<div class="label">Altura</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">60</div>
+<div class="label">Peso</div>
+</div>
+<div class="stat text-center">
+<div class="num fw-bold">22,6</div>
+<div class="label">IMC</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+
+</div>
+</section>
+</main>
+
+<!-- SEÇÃO DO VLibras -->
+<div vw class="enabled">
+<div vw-access-button class="active"></div>
+<div vw-plugin-wrapper>
+<div class="vw-plugin-top-wrapper"></div>
+</div>
+</div>
+
+<!-- Scripts -->
+<script src="~/js/modo-escuro.js" asp-append-version="true"></script>
+
+<!-- VLIBRAS -->
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+﻿@model MedTrack_Projeto.Models.DadosVitais
+
+@{
+ViewData["Title"] = "Create - Dados Vitais";
+}
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- CSS CRUD personalizado -->
+<link rel="stylesheet" href="~/css/crud.css" />
+
+<div class="container py-5">
+<div class="row justify-content-center">
+<div class="col-md-8">
+<div class="card shadow-sm">
+<div class="card-body">
+    <h1 class="text-center mb-4">Create Dados Vitais</h1>
+    <hr />
+
+    <form asp-action="Create">
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+        <div class="mb-3">
+            <label asp-for="Nome" class="form-label"></label>
+            <input asp-for="Nome" class="form-control text-center" />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="CPF" class="form-label"></label>
+            <input asp-for="CPF" class="form-control text-center" />
+            <span asp-validation-for="CPF" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="DataNascimento" class="form-label"></label>
+            <input asp-for="DataNascimento" type="date" class="form-control text-center" />
+            <span asp-validation-for="DataNascimento" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Sexo" class="form-label"></label>
+            <input asp-for="Sexo" class="form-control text-center" />
+            <span asp-validation-for="Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Altura" class="form-label"></label>
+            <input asp-for="Altura" class="form-control text-center" />
+            <span asp-validation-for="Altura" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Peso" class="form-label"></label>
+            <input asp-for="Peso" class="form-control text-center" />
+            <span asp-validation-for="Peso" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="TipoSanguineo" class="form-label"></label>
+            <input asp-for="TipoSanguineo" class="form-control text-center" />
+            <span asp-validation-for="TipoSanguineo" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="SUS" class="form-label"></label>
+            <input asp-for="SUS" class="form-control text-center" />
+            <span asp-validation-for="SUS" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="NomeContato" class="form-label"></label>
+            <input asp-for="NomeContato" class="form-control text-center" />
+            <span asp-validation-for="NomeContato" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="TelefoneContato" class="form-label"></label>
+            <input asp-for="TelefoneContato" class="form-control text-center" />
+            <span asp-validation-for="TelefoneContato" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Relacionamento" class="form-label"></label>
+            <input asp-for="Relacionamento" class="form-control text-center" />
+            <span asp-validation-for="Relacionamento" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Medicamento" class="form-label"></label>
+            <input asp-for="Medicamento" class="form-control text-center" />
+            <span asp-validation-for="Medicamento" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Dosagem" class="form-label"></label>
+            <input asp-for="Dosagem" class="form-control text-center" />
+            <span asp-validation-for="Dosagem" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Frequencia" class="form-label"></label>
+            <input asp-for="Frequencia" class="form-control text-center" />
+            <span asp-validation-for="Frequencia" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Observacoes" class="form-label"></label>
+            <textarea asp-for="Observacoes" class="form-control text-center"></textarea>
+            <span asp-validation-for="Observacoes" class="text-danger"></span>
+        </div>
+
+        <div class="d-grid">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </form>
+
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
