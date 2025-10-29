@@ -113,6 +113,9 @@ Aluno da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 **Mariana Lourenço**
 Aluna da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 
+**Natália Rodrigues**
+Aluna da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
+
 **Nicolas Henrique Alves**
 Aluno da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 
