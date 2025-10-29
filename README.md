@@ -115,6 +115,7 @@ Aluno da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 
 **Sophia Cavallaro**
 Aluna da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
+
 ---
 
 ## 🪪 Licença
