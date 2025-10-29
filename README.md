@@ -25,7 +25,7 @@ Com o MedTrack, busca-se reduzir falhas no registro de dados e otimizar o proces
 
 * **Administrador:** gerencia os agentes de saúde e controla o acesso ao sistema.
 * **Agente de Saúde:** cadastra e atualiza informações de pacientes, além de registrar dados médicos.
-* **Paciente (futuro):** poderá visualizar seus dados e históricos de atendimento.
+* **Paciente:** poderá visualizar seus dados e históricos de atendimento.
 
 ---
 
