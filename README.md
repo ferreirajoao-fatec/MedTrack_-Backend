@@ -98,6 +98,9 @@ Projeto desenvolvido como parte das atividades do curso de **Desenvolvimento de 
 
 ## 👨‍💻 Autores
 
+**Gustavo Baruc**
+Ex - contribuinte
+
 **Fernanda Garcia**
 Aluna da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 
@@ -117,7 +120,9 @@ Aluno da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 Aluna da FATEC Matão – Curso de Desenvolvimento de Software Multiplataforma
 
 ---
-
+## 👩‍🏫 Orientadores
+**Profª. Paula** – Docente responsável pela disciplina de Engenharia de Software I.
+**Prof. Alex** – Docente de apoio técnico e orientação de projeto.
 ## 🪪 Licença
 
 Este projeto é de uso acadêmico e livre para fins educacionais.
