@@ -13,10 +13,11 @@ body {
 }
 
 .container {
-    width: 200px;
-    height: 525px;
+    width: 100%;
+    max-width: 400px; /* mantém o layout fino */
+    min-height: 525px;
     background-color: #009b794d;
-    padding-top: 25px;
+    padding: 25px;
     border-radius: 15px;
 }
 

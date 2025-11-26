@@ -9,5 +9,8 @@ namespace MedTrack_Projeto.Data
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<DadosVitais> DadosVitais { get; set; }
+
+        public DbSet<Formulario> FormularioMedtrack { get; set; }
+
     }
 }
