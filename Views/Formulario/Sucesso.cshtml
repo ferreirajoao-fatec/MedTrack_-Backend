@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Formulário Enviado";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+
+    <!-- Ícone -->
+    <link rel="shortcut icon" href="~/imagens/logo-escuro.svg" type="image/x-icon" asp-append-version="true" />
+
+    <!-- CSS principal do sistema -->
+    <link rel="stylesheet" href="~/css/formulario.css" asp-append-version="true" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Card da mensagem */
+        .sucesso-container {
+            max-width: 520px;
+            margin: 70px auto;
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 18px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.10);
+            text-align: center;
+        }
+
+            .sucesso-container h1 {
+                margin-bottom: 15px;
+                font-size: 26px;
+                font-weight: 700;
+            }
+
+            .sucesso-container p {
+                margin-bottom: 20px;
+                font-size: 16px;
+            }
+
+        /* Botões */
+        .btn-custom {
+            display: inline-block;
+            background-color: #009b7a;
+            color: white;
+            padding: 10px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin: 6px;
+            transition: 0.2s;
+        }
+
+            .btn-custom:hover {
+                background-color: #007a61;
+            }
+
+        /* Botão de voltar (seta) */
+        .voltar {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            font-size: 22px;
+            color: #00251f;
+            text-decoration: none;
+        }
+
+            .voltar:hover {
+                color: #009b7a;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Botão Voltar -->
+    <a class="voltar" asp-controller="Home" asp-action="Index">
+        <i class="fa-solid fa-arrow-left"></i>
+    </a>
+
+    <main>
+        <section class="sucesso-container">
+
+            <i class="fa-solid fa-circle-check" style="font-size:55px;color:#009b7a;margin-bottom:15px;"></i>
+
+            <h1>Formulário enviado!</h1>
+
+            <p>Seus dados foram registrados com sucesso no sistema.</p>
+
+            <a class="btn-custom" asp-controller="Home" asp-action="Index">Voltar para a página inicial</a>
+
+            <a class="btn-custom" asp-controller="Formulario" asp-action="Index">Enviar outro formulário</a>
+
+        </section>
+    </main>
+
+</body>
+</html>
