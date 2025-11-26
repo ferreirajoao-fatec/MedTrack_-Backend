@@ -1,7 +1,7 @@
-@model IEnumerable<MedTrack_Projeto.Models.Usuario>
+Ôªø@model IEnumerable<MedTrack_Projeto.Models.Usuario>
 
-<h2>Usu·rios</h2>
-<a asp-action="Create" class="btn btn-success mb-3">Novo Usu·rio</a>
+<h2>Usu√°rios</h2>
+<a asp-action="Create" class="btn btn-success mb-3">Novo Usu√°rio</a>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -10,7 +10,7 @@
             <th>Telefone</th>
             <th>Tipo</th>
             <th>Ativo</th>
-            <th>AÁıes</th>
+            <th>A√ß√µes</th>
         </tr>
     </thead>
     <tbody>
@@ -24,7 +24,7 @@
                     @(user.TipoUsuario == 1 ? "Administrador" : user.TipoUsuario == 2 ? "Supervisor"
                                     : "Comum")
             </td>
-            <td>@(user.AtivarUsuario ? "Sim" : "N„o")</td>
+            <td>@(user.AtivarUsuario ? "Sim" : "N√£o")</td>
             <td>
                 <a asp-action="Edit" asp-route-id="@user.Id" class="btn btn-primary btnsm">Editar</a>
                 @if (User.IsInRole("Administrador"))

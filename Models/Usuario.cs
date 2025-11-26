@@ -1,6 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Identity;
+    using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MedTrack_Projeto.Models
 {
@@ -8,35 +9,37 @@ namespace MedTrack_Projeto.Models
     {
         // Chave primária
         [Key]
-        public int IdUsuario { get; set; }
+        public int Id { get; set; }
 
-        [Required]
-        public string NomeUsuario { get; set; }
-        [Required]
-        public string EmailUsuario { get; set; }
-        public string CpfUsuario { get; set; }
-        [Required]
-        public string SenhaUsuario { get; set; }
-        public string ConfirmarSenhaUsuario { get; set; }
+        [Required(ErrorMessage = "O nome é obrigatório")]
 
-        public Usuario()
-        {
-            IdUsuario = 0;
-            NomeUsuario = string.Empty;
-            EmailUsuario = string.Empty;
-            CpfUsuario = string.Empty;
-            SenhaUsuario = string.Empty;
-            ConfirmarSenhaUsuario = "";
-        }
+        public string Nome { get; set; } = string.Empty;
 
-        public Usuario(int idUsuario, string nomeUsuario, string emailUsuario, string cpfUsuario, string senhaUsuario, string confirmarSenhaUsuario)
-        {
-            IdUsuario = idUsuario;
-            NomeUsuario = nomeUsuario;
-            EmailUsuario = emailUsuario;
-            CpfUsuario = cpfUsuario;
-            SenhaUsuario = senhaUsuario;
-            ConfirmarSenhaUsuario = confirmarSenhaUsuario;
-        }
+        [Required(ErrorMessage = "O telefone é obrigatório")]
+
+        public string Telefone { get; set; } = string.Empty;
+
+        [Required(ErrorMessage = "O email é obrigatório")]
+        [EmailAddress(ErrorMessage = "Email inválido")]
+        public string Email { get; set; } = string.Empty;
+
+        // Removed [Required] here so model validation uses Senha (the user input)
+        public string SenhaHash { get; set; } = string.Empty;
+
+        [NotMapped]
+        [Required(ErrorMessage = "A senha é obrigatória")]
+        [DataType(DataType.Password)]
+        public string Senha { get; set; } = string.Empty;
+
+        [NotMapped]
+        [Required(ErrorMessage = "Confirme a senha")]
+        [DataType(DataType.Password)]
+        [Compare(nameof(Senha), ErrorMessage = "As senhas devem coincidir")]
+        public string ConfirmarSenha { get; set; } = string.Empty;
+
+        public bool AtivarUsuario { get; set; }
+
+        [Required(ErrorMessage = "O tipo do usuário é obrigatório")]
+        public int TipoUsuario { get; set; } // 1 = Admin, 2 = Supervisor, 3 = Comum
     }
 }
